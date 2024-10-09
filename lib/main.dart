@@ -4,6 +4,7 @@ import 'package:islamy_c12_dokki/quran_details/quran_details_screen.dart';
 // untracked (Unversioned) - tracked file - ignored file
 // commit
 void main() {
+  // new version
   runApp(const MyApp());
 }
 
