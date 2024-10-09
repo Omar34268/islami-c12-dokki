@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
+import 'package:islamy_c12_dokki/ahadeth_details/ahadeth_details_screen.dart';
 import 'package:islamy_c12_dokki/home/Hadeth.dart';
 
 class AhadethTab extends StatefulWidget {
@@ -31,12 +32,17 @@ class _AhadethTabState extends State<AhadethTab> {
         Expanded(
           flex: 2,
           child: ListView.separated( // dummy data
-              itemBuilder: (context, index) => Text(ahadethList[index].title,
-                style: TextStyle(
-                  fontSize: 25,
-                  fontWeight: FontWeight.w400
+              itemBuilder: (context, index) => InkWell(
+                onTap: (){
+                  Navigator.of(context).pushNamed(AhadethDetails.routeName,arguments: ahadethList[index]);
+                },
+                child: Text(ahadethList[index].title,
+                  style: TextStyle(
+                    fontSize: 25,
+                    fontWeight: FontWeight.w400
+                  ),
+                  textAlign: TextAlign.center,
                 ),
-                textAlign: TextAlign.center,
               ),
               separatorBuilder: (context, index) => SizedBox(height: 10,),
               itemCount: ahadethList.length),

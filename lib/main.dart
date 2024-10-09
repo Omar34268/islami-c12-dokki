@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:islamy_c12_dokki/ahadeth_details/ahadeth_details_screen.dart';
 import 'package:islamy_c12_dokki/home/home_screen.dart';
 import 'package:islamy_c12_dokki/quran_details/quran_details_screen.dart';
 // untracked (Unversioned) - tracked file - ignored file
@@ -62,7 +63,8 @@ class MyApp extends StatelessWidget {
       initialRoute: HomeScreen.routeName,
       routes: {
         HomeScreen.routeName:(_)=>HomeScreen(),
-        QuranDetailsScreen.routeName:(_)=>QuranDetailsScreen()
+        QuranDetailsScreen.routeName:(_)=>QuranDetailsScreen(),
+        AhadethDetails.routeName:(_)=>AhadethDetails()
       },
     );
   }
