@@ -52,7 +52,7 @@ class _SebhatabState extends State<Sebhatab> with SingleTickerProviderStateMixin
                 child: Container(
                   margin: const EdgeInsets.only(left: 50),
                   child: Image.asset(
-                    "assets/head_of_seb7a.png",
+                    "assets/images/head_of_seb7a.png",
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -83,7 +83,7 @@ class _SebhatabState extends State<Sebhatab> with SingleTickerProviderStateMixin
                   child: Container(
                     margin: const EdgeInsets.only(bottom: 10),
                     child: Image.asset(
-                      "assets/body_of_seb7a.png",
+                      "assets/images/body_of_seb7a.png",
                       fit: BoxFit.cover,
                     ),
                   ),
