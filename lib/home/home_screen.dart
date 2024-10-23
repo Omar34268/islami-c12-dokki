@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:islamy_c12_dokki/Appstyle.dart';
 import 'package:islamy_c12_dokki/home/tabs/AhadethTab.dart';
 import 'package:islamy_c12_dokki/home/tabs/QuranTab.dart';
 import 'package:islamy_c12_dokki/home/tabs/RadioTab.dart';
 import 'package:islamy_c12_dokki/home/tabs/SebhaTab.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:islamy_c12_dokki/home/tabs/settings_tab.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String routeName = "home";
@@ -19,14 +20,16 @@ class _HomeScreenState extends State<HomeScreen> {
     QuranTab(),
     AhadethTab(),
     Sebhatab(),
-    RadioTab()
+    RadioTab(),
+    SettingsTab()
   ];
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-            image: AssetImage("assets/images/background.png"),
+            image: AssetImage( Appstyle.isdark?"assets/images/darkback.png":
+            "assets/images/background.png"),
           fit: BoxFit.fill
         )
       ),
@@ -62,6 +65,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   backgroundColor: Theme.of(context).colorScheme.primary,
                   icon: ImageIcon(AssetImage("assets/images/radio.png")),
                   label: AppLocalizations.of(context)!.radio
+              ),
+              BottomNavigationBarItem(
+                  backgroundColor: Theme.of(context).colorScheme.primary,
+                  icon: Icon(Icons.settings),
+                  label: "Settings"
               ),
             ]
         ),
