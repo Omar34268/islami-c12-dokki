@@ -5,8 +5,10 @@
   "quran": "قران",
   "ahadeth":"احاديث",
   "radio": "اذاعه",
-  "tasbeeth":"تسبيح"
-
-
-
+  "tasbeeth":"تسبيح",
+  "settings":"الاعدادات",
+  "light": "منير",
+  "dark": "مظلم",
+  "lanuage":"اللغه",
+  "theme": "الشكل"
 }

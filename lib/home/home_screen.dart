@@ -6,6 +6,9 @@ import 'package:islamy_c12_dokki/home/tabs/RadioTab.dart';
 import 'package:islamy_c12_dokki/home/tabs/SebhaTab.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islamy_c12_dokki/home/tabs/settings_tab.dart';
+import 'package:provider/provider.dart';
+
+import '../provider/settingsprovider.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String routeName = "home";
@@ -25,10 +28,11 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
   @override
   Widget build(BuildContext context) {
+    Settingsprovider settingsprovider= Provider.of<Settingsprovider>(context);
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-            image: AssetImage( Appstyle.isdark?"assets/images/darkback.png":
+            image: AssetImage(settingsprovider.themeMode==ThemeMode.dark?"assets/images/darkback.png":
             "assets/images/background.png"),
           fit: BoxFit.fill
         )
@@ -69,7 +73,7 @@ class _HomeScreenState extends State<HomeScreen> {
               BottomNavigationBarItem(
                   backgroundColor: Theme.of(context).colorScheme.primary,
                   icon: Icon(Icons.settings),
-                  label: "Settings"
+                  label:AppLocalizations.of(context)!.settings
               ),
             ]
         ),
