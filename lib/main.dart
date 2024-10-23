@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:islamy_c12_dokki/ahadeth_details/ahadeth_details_screen.dart';
 import 'package:islamy_c12_dokki/home/home_screen.dart';
 import 'package:islamy_c12_dokki/quran_details/quran_details_screen.dart';
-// untracked (Unversioned) - tracked file - ignored file
-// commit
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 void main() {
   // new version
   runApp(const MyApp());
@@ -60,6 +61,17 @@ class MyApp extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
+      localizationsDelegates: [
+        AppLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: [
+        Locale('en'), // English
+        Locale('ar'), // Spanish
+      ],
+      locale: Locale("ar"),
       initialRoute: HomeScreen.routeName,
       routes: {
         HomeScreen.routeName:(_)=>HomeScreen(),
